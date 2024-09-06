@@ -1,0 +1,82 @@
+#wrapper {
+    width: 100%;
+    margin: 5%;
+    padding: 0;
+    scroll-snap-type: y mandatory;
+}
+
+.news_slider_list {
+    /*display: grid;
+    grid-column: auto;
+    /* Автоматически заполняем на всю ширину grid-контейнера */
+    /*grid-template-columns: repeat(auto-fill, 30%);*/
+    justify-content: center;
+    justify-items: center; /* Размещаем карточку по центру */
+    gap: 5% 10px;
+    position: relative;
+    height: 200px;
+    margin: 50px auto 0;
+    /* Чтобы во время перетаскивания слайда ничего не выделить внутри него */
+    user-select: none;
+    /* Чтобы запретить скролл страницы, если мы начали двигать слайдер по оси X */
+    touch-action: pan-y;
+    overflow: none;
+  }
+  
+  .news_slider_items img {
+    pointer-events: none;
+  }
+
+  .news_slider_items {
+    display: flex;
+    scroll-snap-align: start;
+  }
+
+  .news_slider_list.grab {
+    cursor: grab;
+  }
+  
+  .news_slider_list.grabbing{
+    cursor: grabbing;
+  }
+
+  .news_card {
+    width: 300px;
+    min-height: 300px;
+    box-shadow: 1px 2px 4px hwb(28 8% 3%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    transition: 0.2s;
+    padding: 15px;
+    margin: 15px;
+    overflow: hidden;
+  }
+
+  .news_card_image{
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 2%;
+  }
+  
+  .prev-button,
+  .next-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    color: white;
+  }
+  
+  .prev-button {
+    left: 10px;
+  }
+  
+  .next-button {
+    right: 10px;
+  }
